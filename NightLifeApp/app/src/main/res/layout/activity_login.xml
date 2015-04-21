@@ -3,26 +3,25 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:padding="8dp"
     tools:context="com.boum_ivan.nightlifeapp.Login">
 
     <TableLayout
         android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="fill_parent"
         android:stretchColumns="*"
         android:padding="10dp">
         <TableRow
+            android:layout_weight="0.1"
             android:layout_width="fill_parent"
             android:layout_height="fill_parent">
-
             <EditText
                 android:layout_height="fill_parent"
                 android:layout_width="fill_parent"
                 android:hint="@string/username"/>
-
         </TableRow>
 
         <TableRow
+            android:layout_weight="0.1"
             android:layout_width="fill_parent"
             android:layout_height="fill_parent">
 
@@ -36,7 +35,8 @@
         <TableRow
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
-            android:layout_marginTop="25dp">
+            android:layout_weight="0.1"
+            android:layout_marginTop="5dp">
 
             <Button
                 android:layout_height="fill_parent"
@@ -45,8 +45,16 @@
 
         </TableRow>
 
-
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="2">
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" />
+        </TableRow>
 
     </TableLayout>
+
 
 </RelativeLayout>
