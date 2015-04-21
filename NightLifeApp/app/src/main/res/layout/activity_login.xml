@@ -1,0 +1,52 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:padding="8dp"
+    tools:context="com.boum_ivan.nightlifeapp.Login">
+
+    <TableLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:stretchColumns="*"
+        android:padding="10dp">
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+
+            <EditText
+                android:layout_height="fill_parent"
+                android:layout_width="fill_parent"
+                android:hint="@string/username"/>
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+
+            <EditText
+                android:layout_height="fill_parent"
+                android:layout_width="fill_parent"
+                android:hint="@string/password"/>
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginTop="25dp">
+
+            <Button
+                android:layout_height="fill_parent"
+                android:layout_width="fill_parent"
+                android:text="@string/login"/>
+
+        </TableRow>
+
+
+
+    </TableLayout>
+
+</RelativeLayout>

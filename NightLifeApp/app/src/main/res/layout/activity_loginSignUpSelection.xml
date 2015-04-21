@@ -1,0 +1,44 @@
+<TableLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:padding="8dp"
+    android:orientation="vertical"
+    tools:context=".LoginSignUpSelection"
+    android:stretchColumns="*">
+
+
+    <TableRow
+        android:layout_weight="3"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:text="@string/temporary"
+            android:gravity="center"/>
+    </TableRow>
+
+    <TableRow
+        android:layout_weight="0.2"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+        <Button
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:text="@string/login"/>
+    </TableRow>
+
+    <TableRow
+        android:layout_weight="0.2"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+        <Button
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:text="@string/signup"/>
+    </TableRow>
+
+
+</TableLayout>
