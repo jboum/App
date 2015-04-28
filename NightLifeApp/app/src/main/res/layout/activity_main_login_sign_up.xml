@@ -26,7 +26,8 @@
         <Button
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
-            android:text="@string/login"/>
+            android:text="@string/login"
+            android:id="@+id/loginBtn"/>
     </TableRow>
 
     <TableRow
@@ -36,7 +37,8 @@
         <Button
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
-            android:text="@string/signup"/>
+            android:text="@string/signup"
+            android:id="@+id/signUpBtn"/>
     </TableRow>
 
 

@@ -2,7 +2,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    tools:context="com.boum_ivan.nightlifeapp.SignUp">
+    tools:context="com.boum_ivan.nightlifeapp.Log_In_Sign_Up.SignUpActivity">
 
     <TableLayout
         android:layout_width="fill_parent"
@@ -17,7 +17,8 @@
             <EditText
                 android:layout_height="fill_parent"
                 android:layout_width="fill_parent"
-                android:hint="@string/firstName"/>
+                android:hint="@string/firstName"
+                android:id="@+id/firstName"/>
         </TableRow>
 
         <TableRow
@@ -27,7 +28,8 @@
             <EditText
                 android:layout_height="fill_parent"
                 android:layout_width="fill_parent"
-                android:hint="@string/lastName"/>
+                android:hint="@string/lastName"
+                android:id="@+id/lastName"/>
         </TableRow>
 
         <TableRow
@@ -37,7 +39,8 @@
             <EditText
                 android:layout_height="fill_parent"
                 android:layout_width="fill_parent"
-                android:hint="@string/email"/>
+                android:hint="@string/email"
+                android:id="@+id/email"/>
         </TableRow>
 
         <TableRow
@@ -47,7 +50,8 @@
             <EditText
                 android:layout_height="fill_parent"
                 android:layout_width="fill_parent"
-                android:hint="@string/password"/>
+                android:hint="@string/password"
+                android:id="@+id/password"/>
         </TableRow>
 
         <TableRow
@@ -57,7 +61,8 @@
             <EditText
                 android:layout_height="fill_parent"
                 android:layout_width="fill_parent"
-                android:hint="@string/confirmPassword"/>
+                android:hint="@string/confirmPassword"
+                android:id="@+id/confirmPassword"/>
         </TableRow>
 
         <TableRow
@@ -68,7 +73,8 @@
             <Button
                 android:layout_height="fill_parent"
                 android:layout_width="fill_parent"
-                android:text="@string/signup"/>
+                android:text="@string/signup"
+                android:id="@+id/signUpBtn"/>
         </TableRow>
 
         <TableRow

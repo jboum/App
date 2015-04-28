@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    tools:context="com.boum_ivan.nightlifeapp.Login">
+    tools:context="com.boum_ivan.nightlifeapp.Log_In_Sign_Up.LoginActivity">
 
     <TableLayout
         android:layout_width="fill_parent"
@@ -17,7 +17,8 @@
             <EditText
                 android:layout_height="fill_parent"
                 android:layout_width="fill_parent"
-                android:hint="@string/username"/>
+                android:hint="@string/username"
+                android:id="@+id/username"/>
         </TableRow>
 
         <TableRow
@@ -28,7 +29,8 @@
             <EditText
                 android:layout_height="fill_parent"
                 android:layout_width="fill_parent"
-                android:hint="@string/password"/>
+                android:hint="@string/password"
+                android:id="@+id/password"/>
 
         </TableRow>
 
@@ -41,7 +43,8 @@
             <Button
                 android:layout_height="fill_parent"
                 android:layout_width="fill_parent"
-                android:text="@string/login"/>
+                android:text="@string/login"
+                android:id="@+id/loginBtn"/>
 
         </TableRow>
 
