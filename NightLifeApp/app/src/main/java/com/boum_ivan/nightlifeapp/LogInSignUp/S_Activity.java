@@ -1,4 +1,4 @@
-package com.boum_ivan.nightlifeapp.Log_In_Sign_Up;
+package com.boum_ivan.nightlifeapp.LogInSignUp;
 
 import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
@@ -12,7 +12,7 @@ import com.boum_ivan.nightlifeapp.Home_Screen.MainActivityHomeScreen;
 import com.boum_ivan.nightlifeapp.R;
 
 
-public class SignUpActivity extends ActionBarActivity implements OnSignUpRequestComplete{
+public class S_Activity extends ActionBarActivity implements OnSignUpRequestComplete{
 
 
     EditText firstNameInput;
@@ -27,7 +27,7 @@ public class SignUpActivity extends ActionBarActivity implements OnSignUpRequest
     private String password1;
     private String password2;
 
-    private LoginSignUpActions loginSignUpActions;
+    private L_S_Actions L_S_Actions;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -43,16 +43,16 @@ public class SignUpActivity extends ActionBarActivity implements OnSignUpRequest
         signUp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                loginSignUpActions = LoginSignUpActions.SIGN_UP;
-                buttonHandler(loginSignUpActions);
+                L_S_Actions = L_S_Actions.SIGN_UP;
+                buttonHandler(L_S_Actions);
             }
         });
 
     }
 
 
-    public void buttonHandler(LoginSignUpActions loginSignUpActions){
-        switch (loginSignUpActions){
+    public void buttonHandler(L_S_Actions L_S_Actions){
+        switch (L_S_Actions){
             case SIGN_UP:
                 getInputData();
                 validateFields();
@@ -70,16 +70,16 @@ public class SignUpActivity extends ActionBarActivity implements OnSignUpRequest
 
     public void validateFields(){
         if(firstName.equals("")||lastName.equals("")||email.equals("")||password1.equals("")||password2.equals(""))
-            displayMessage(LoginSignUpMessageTypes.ERROR_BLANK_SPACE);
+            displayMessage(L_S_MessageTypes.ERROR_BLANK_SPACE);
         else if(!(password1.equals(password2)))
-            displayMessage(LoginSignUpMessageTypes.ERROR_PASSWORD_MISMATCH);
+            displayMessage(L_S_MessageTypes.ERROR_PASSWORD_MISMATCH);
         else{
                registerUserOnServer();
         }
     }
 
 
-    public void displayMessage(LoginSignUpMessageTypes messageType){
+    public void displayMessage(L_S_MessageTypes messageType){
         switch(messageType){
             case ERROR_BLANK_SPACE:
                 Toast.makeText(this,"Error, One or more input fields are be empty",Toast.LENGTH_SHORT).show();
@@ -99,7 +99,7 @@ public class SignUpActivity extends ActionBarActivity implements OnSignUpRequest
             signUpParameters[2] = email;
             signUpParameters[3] = password1;
 
-        new SignUpAsyncTask(this).execute(signUpParameters);
+        new S_AsyncTask(this).execute(signUpParameters);
     }
 
 
@@ -107,7 +107,7 @@ public class SignUpActivity extends ActionBarActivity implements OnSignUpRequest
         if(serverResponse)
             startHomePageActivity();
         else
-            displayMessage(LoginSignUpMessageTypes.ERROR_SIGN_UP);
+            displayMessage(L_S_MessageTypes.ERROR_SIGN_UP);
 
     }
 

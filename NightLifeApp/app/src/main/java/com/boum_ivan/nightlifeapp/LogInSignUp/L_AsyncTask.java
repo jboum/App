@@ -1,4 +1,4 @@
-package com.boum_ivan.nightlifeapp.Log_In_Sign_Up;
+package com.boum_ivan.nightlifeapp.LogInSignUp;
 
 import android.content.Context;
 import android.os.AsyncTask;
@@ -8,12 +8,12 @@ import org.json.JSONObject;
 /**
  * Created by ivan on 28/04/2015.
  */
-public class LoginAsyncTask extends AsyncTask<String[], Void, Boolean>{
+public class L_AsyncTask extends AsyncTask<String[], Void, Boolean>{
 
     private Context context;
     private OnLoginRequestComplete loginRequestComplete;
 
-    public LoginAsyncTask(Context context){
+    public L_AsyncTask(Context context){
         this.context = context;
         loginRequestComplete = (OnLoginRequestComplete)context;
     }

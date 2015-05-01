@@ -1,4 +1,4 @@
-package com.boum_ivan.nightlifeapp.Log_In_Sign_Up;
+package com.boum_ivan.nightlifeapp.LogInSignUp;
 
 import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
@@ -9,9 +9,9 @@ import android.widget.Button;
 import com.boum_ivan.nightlifeapp.R;
 
 
-public class LoginSignUpMainActivity extends ActionBarActivity {
+public class L_S_MainActivity extends ActionBarActivity {
 
-    private LoginSignUpActions loginSignUpActions;
+    private L_S_Actions L_S_Actions;
     private Intent nextActivity;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,28 +24,28 @@ public class LoginSignUpMainActivity extends ActionBarActivity {
         loginBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                loginSignUpActions = LoginSignUpActions.LOG_IN;
-                buttonHandler(loginSignUpActions);
+                L_S_Actions = L_S_Actions.LOG_IN;
+                buttonHandler(L_S_Actions);
             }
         });
 
         signUpBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                loginSignUpActions = LoginSignUpActions.SIGN_UP;
-                buttonHandler(loginSignUpActions);
+                L_S_Actions = L_S_Actions.SIGN_UP;
+                buttonHandler(L_S_Actions);
             }
         });
     }
 
 
-    public void buttonHandler(LoginSignUpActions loginSignUpActions){
-        switch(loginSignUpActions){
+    public void buttonHandler(L_S_Actions L_S_Actions){
+        switch(L_S_Actions){
             case LOG_IN:
-                nextActivity = new Intent(this, LoginActivity.class);
+                nextActivity = new Intent(this, L_Activity.class);
                 break;
             case SIGN_UP:
-                nextActivity = new Intent(this, SignUpActivity.class);
+                nextActivity = new Intent(this, S_Activity.class);
                 break;
         }
 

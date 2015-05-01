@@ -1,4 +1,4 @@
-package com.boum_ivan.nightlifeapp.Log_In_Sign_Up;
+package com.boum_ivan.nightlifeapp.LogInSignUp;
 
 import org.json.JSONObject;
 

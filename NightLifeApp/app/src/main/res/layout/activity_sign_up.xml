@@ -2,7 +2,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    tools:context="com.boum_ivan.nightlifeapp.Log_In_Sign_Up.SignUpActivity">
+    tools:context="com.boum_ivan.nightlifeapp.LogInSignUp.S_Activity">
 
     <TableLayout
         android:layout_width="fill_parent"
@@ -29,7 +29,7 @@
                 android:layout_height="fill_parent"
                 android:layout_width="fill_parent"
                 android:hint="@string/lastName"
-                android:id="@+id/lastName"/>
+                android:id="@+id/lastName" />
         </TableRow>
 
         <TableRow
@@ -40,7 +40,7 @@
                 android:layout_height="fill_parent"
                 android:layout_width="fill_parent"
                 android:hint="@string/email"
-                android:id="@+id/email"/>
+                android:id="@+id/email" />
         </TableRow>
 
         <TableRow
@@ -51,7 +51,7 @@
                 android:layout_height="fill_parent"
                 android:layout_width="fill_parent"
                 android:hint="@string/password"
-                android:id="@+id/password"/>
+                android:id="@+id/password" />
         </TableRow>
 
         <TableRow
@@ -62,7 +62,7 @@
                 android:layout_height="fill_parent"
                 android:layout_width="fill_parent"
                 android:hint="@string/confirmPassword"
-                android:id="@+id/confirmPassword"/>
+                android:id="@+id/confirmPassword" />
         </TableRow>
 
         <TableRow

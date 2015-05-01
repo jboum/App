@@ -8,7 +8,7 @@
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
         <activity
-            android:name=".Log_In_Sign_Up.LoginSignUpMainActivity"
+            android:name=".LogInSignUp.L_S_MainActivity"
             android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -21,11 +21,11 @@
             android:label="@string/title_activity_main"  >
         </activity>
         <activity
-            android:name=".Log_In_Sign_Up.SignUpActivity"
+            android:name=".LogInSignUp.S_Activity"
             android:label="@string/title_activity_sign_up" >
         </activity>
         <activity
-            android:name=".Log_In_Sign_Up.LoginActivity"
+            android:name=".LogInSignUp.L_Activity"
             android:label="@string/title_activity_login">
         </activity>
         <activity

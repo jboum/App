@@ -1,9 +1,9 @@
-package com.boum_ivan.nightlifeapp.Log_In_Sign_Up;
+package com.boum_ivan.nightlifeapp.LogInSignUp;
 
 /**
  * Created by ivan on 28/04/2015.
  */
-public enum LoginSignUpMessageTypes {
+public enum L_S_MessageTypes {
     ERROR,
     ERROR_BLANK_SPACE,
     ERROR_PASSWORD_MISMATCH,

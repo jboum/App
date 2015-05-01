@@ -1,4 +1,4 @@
-package com.boum_ivan.nightlifeapp.Log_In_Sign_Up;
+package com.boum_ivan.nightlifeapp.LogInSignUp;
 
 import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
@@ -12,12 +12,12 @@ import com.boum_ivan.nightlifeapp.Home_Screen.MainActivityHomeScreen;
 import com.boum_ivan.nightlifeapp.R;
 
 
-public class LoginActivity extends ActionBarActivity implements OnLoginRequestComplete{
+public class L_Activity extends ActionBarActivity implements OnLoginRequestComplete{
 
     private EditText username;
     private EditText password;
     private Button loginBtn;
-    private LoginSignUpActions loginSignUpActions;
+    private L_S_Actions L_S_Actions;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,15 +30,15 @@ public class LoginActivity extends ActionBarActivity implements OnLoginRequestCo
         loginBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                loginSignUpActions = LoginSignUpActions.LOG_IN;
-                buttonHandler(loginSignUpActions);
+                L_S_Actions = L_S_Actions.LOG_IN;
+                buttonHandler(L_S_Actions);
             }
         });
     }
 
 
-    public void buttonHandler(LoginSignUpActions loginSignUpActions){
-        switch (loginSignUpActions){
+    public void buttonHandler(L_S_Actions L_S_Actions){
+        switch (L_S_Actions){
             case LOG_IN:
                 getLoginParameters();
                 break;
@@ -53,13 +53,13 @@ public class LoginActivity extends ActionBarActivity implements OnLoginRequestCo
         loginParameters[1] = passwordInput;
 
         if(usernameInput.equals("") || passwordInput.equals(""))
-            displayMessage(LoginSignUpMessageTypes.ERROR_BLANK_SPACE);
+            displayMessage(L_S_MessageTypes.ERROR_BLANK_SPACE);
         else{
-            new LoginAsyncTask(this).execute(loginParameters);
+            new L_AsyncTask(this).execute(loginParameters);
         }
     }
 
-    public void displayMessage(LoginSignUpMessageTypes messageType){
+    public void displayMessage(L_S_MessageTypes messageType){
         switch(messageType){
             case ERROR_BLANK_SPACE:
                 Toast.makeText(this,"Error, One or more input fields are empty",Toast.LENGTH_SHORT).show();
@@ -74,7 +74,7 @@ public class LoginActivity extends ActionBarActivity implements OnLoginRequestCo
         if(serverResponse)
             startHomePageActivity();
         else
-            displayMessage(LoginSignUpMessageTypes.ERROR_LOG_IN);
+            displayMessage(L_S_MessageTypes.ERROR_LOG_IN);
     }
 
     public void startHomePageActivity(){
